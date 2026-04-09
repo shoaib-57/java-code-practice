@@ -1,8 +1,10 @@
-public class Dog {
+//encapsulation
+
+public class encapsulation {
     private String name ;
     private int age ;
 
-    Dog(String name , int age ){
+    encapsulation(String name , int age ){
         this.name = name ;
         this.age = age ;
 
@@ -41,13 +43,8 @@ public class Dog {
         }
 
     }
-
-
-
-
-    
     public static void main(String[] args) {
-        Dog d1 = new Dog("bruno", 3);
+        encapsulation d1 = new encapsulation("bruno", 3);
         System.out.println(d1.getName());
         System.out.println(d1.getAge());
 
@@ -56,11 +53,7 @@ public class Dog {
 
 
 
-
-
-
-
-        Dog d2 = new Dog("tommy ", 5);
+        encapsulation d2 = new encapsulation("tommy ", 5);
         System.out.println(d1.getName());
         System.out.println(d2.getAge());
 
@@ -72,7 +65,6 @@ public class Dog {
         // d2.info();
 
     }
-
-
-
 }
+
+
