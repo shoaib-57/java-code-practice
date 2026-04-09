@@ -40,7 +40,7 @@ System.out.println("calculating area ....." );
           c.area();
           r.area();
           t.area();
-fvf
+
         }
     }
    
