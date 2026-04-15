@@ -50,25 +50,45 @@
 //         }
 //     }
 
-public class Arithmetic {
+// public class Arithmetic {
     
-  static void checkage(int age ) throws ArithmeticException {
-    if (age < 0) {
-        throw new ArithmeticException ("Age cannot be negative");
-    }else {
-        System.out.println("Valid age: " + age);
-    }
+//   static void checkage(int age ) throws ArithmeticException {
+//     if (age < 0) {
+//         throw new ArithmeticException ("Age cannot be negative");
+//     }else {
+//         System.out.println("Valid age: " + age);
+//     }
 
-}
-public static void main(String[] args) {
-    try {
-        checkage(-10);
+// }
+// public static void main(String[] args) {
+//     try {
+//         checkage(-10);
 
-    }catch (ArithmeticException e ) {
-        System.out.println("Error: " + e.getMessage());
+//     }catch (ArithmeticException e ) {
+//         System.out.println("Error: " + e.getMessage());
+//     }
+// }
+//     }
+
+public class Arithmetic {
+    static void withdraw(double balance , double amount) throws ArithmeticException{
+        if (amount > balance) {
+            throw new ArithmeticException ("Insufficient balance!");
+        }else {
+            System.out.println("withdrawal successful! remaining balance: " + (balance - amount));
+        }
+    }
+    public static void main(String[] args) {
+        try {
+                withdraw (1000, 500);
+        }catch (ArithmeticException e)
+        {
+            System.out.println("Error: " + e.getMessage());
+        }
+        
     }
 }
-    }
+
 
        
 
