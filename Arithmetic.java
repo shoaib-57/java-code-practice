@@ -91,16 +91,37 @@
 // }
        
 public class Arithmetic {
-    static void Validatepassword(String password) throws ArithmeticException {
+    static void ValidatePassword(String password) throws Exception {
         if (password.length() < 8) {
-            throw new ArthmeticException ("password too short!");
+            throw new Exception ("password too short!");
+
+        }else if (password.equals("12345678")){
+           throw new Exception ("password is too weak");
 
         }else {
-            System.out.println("password is valid");
-              
+            System.out.println("password is strong");
+     
+} 
+        
+      }
+      
+      public static void main(String[] args) {
+       
+        String[] passwords = {"abc ", "12345678", "Mypassword123 "};
+        for (String p : passwords ){
+            try {
+                ValidatePassword(p);
+
+            }catch(Exception e ) {
+            System.out.println("Error:  " + e.getMessage());
+            }
+        }
+            
+        
       }
     }
-}finally
+
+
 
         
 
