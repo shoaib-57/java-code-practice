@@ -70,27 +70,37 @@
 // }
 //     }
 
-public class Arithmetic {
-    static void withdraw(double balance , double amount) throws ArithmeticException{
-        if (amount > balance) {
-            throw new ArithmeticException ("Insufficient balance!");
-        }else {
-            System.out.println("withdrawal successful! remaining balance: " + (balance - amount));
-        }
-    }
-    public static void main(String[] args) {
-        try {
-                withdraw (1000, 500);
-        }catch (ArithmeticException e)
-        {
-            System.out.println("Error: " + e.getMessage());
-        }
+
+// public class Arithmetic {
+//     static void withdraw(double balance , double amount) throws ArithmeticException{
+//         if (amount > balance) {
+//             throw new ArithmeticException ("Insufficient balance!");
+//         }else {
+//             System.out.println("withdrawal successful! remaining balance: " + (balance - amount));
+//         }
+//     }
+//     public static void main(String[] args) {
+//         try {
+//                 withdraw (1000, 500);
+//         }catch (ArithmeticException e)
+//         {
+//             System.out.println("Error: " + e.getMessage());
+//         }
         
-    }
-}
-
-
+//     }
+// }
        
+public class Arithmetic {
+    static void Validatepassword(String password) throws ArithmeticException {
+        if (password.length() < 8) {
+            throw new ArthmeticException ("password too short!");
+
+        }else {
+            System.out.println("password is valid");
+              
+      }
+    }
+}finally
 
         
 
