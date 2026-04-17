@@ -90,36 +90,68 @@
 //     }
 // }
        
-public class Arithmetic {
-    static void ValidatePassword(String password) throws Exception {
-        if (password.length() < 8) {
-            throw new Exception ("password too short!");
+// public class Arithmetic {
+//     static void ValidatePassword(String password) throws Exception {
+//         if (password.length() < 8) {
+//             throw new Exception ("password too short!");
 
-        }else if (password.equals("12345678")){
-           throw new Exception ("password is too weak");
+//         }else if (password.equals("12345678")){
+//            throw new Exception ("password is too weak");
 
-        }else {
-            System.out.println("password is strong");
+//         }else {
+//             System.out.println("password is strong");
      
-} 
+// } 
         
-      }
+//       }
       
-      public static void main(String[] args) {
+//       public static void main(String[] args) {
        
-        String[] passwords = {"abc ", "12345678", "Mypassword123 "};
-        for (String p : passwords ){
-            try {
-                ValidatePassword(p);
+//         String[] passwords = {"abc ", "12345678", "Mypassword123 "};
+//         for (String p : passwords ){
+//             try {
+//                 ValidatePassword(p);
 
-            }catch(Exception e ) {
-            System.out.println("Error:  " + e.getMessage());
-            }
-        }
+//             }catch(Exception e ) {
+//             System.out.println("Error:  " + e.getMessage());
+//             }
+//         }
             
         
-      }
+//       }
+//     }
+class InsufficientBalanceException extends Exception {
+    InsufficientBalanceException(String message) {
+        super(message);
     }
+}
+
+public class Arithmetic {
+    static void withdraw (double balance , double amount ) throws InsufficientBalanceException  {
+     if (amount > balance ){
+        throw new InsufficientBalanceException ("Insufficient balance ");
+
+     }else {
+        System.out.println("succesful " + (balance - amount));
+     }
+
+    }
+    public static void main(String[] args) {
+        try {
+            withdraw(1000,1500);
+           
+        }catch (Exception e ){
+            System.out.println("invalid :" + e.getMessage());
+        }
+        
+        try {
+           
+            withdraw(1000,500);
+        }catch (Exception e ){
+            System.out.println("invalid :" + e.getMessage());
+        }
+}
+}
 
 
 
