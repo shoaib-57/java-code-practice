@@ -150,7 +150,7 @@ public class Arithmetic {
         }catch (Exception e ){
             System.out.println("invalid :" + e.getMessage());
         }
-}cc
+}c
 }
 
 
