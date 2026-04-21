@@ -69,7 +69,7 @@ public class Hashmap {
 
         }
        for (String name : map.keySet()){
-        System.out.println(name + " : " + map.get(name));12
+        System.out.println(name + " : " + map.get(name));1
        }
     }
 }
