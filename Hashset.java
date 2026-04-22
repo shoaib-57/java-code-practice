@@ -10,19 +10,45 @@ public class Hashset {
     set.add("apple");
     set.add("banana");
 
-    // for(String fruit : set ){
-    // System.out.println( "total fruit : "+ fruit );
-    // }
+    for(String fruit : set ){
+    System.out.println( fruit );
+    }
     
-// System.out.println("total size :" + set.size());
+    
+System.out.println("total fruits:" + set.size());
 
 if (set.contains("mango")){
     System.out.println("mango found ");
 }
 set.remove("banana");
 
+
+
+System.out.println("remaining fruit : ");
 for(String fruit : set ){
-    System.out.println("remaining fruit : " + fruit );
+    System.out.println(  fruit );
 }
+
+
+        String[] names = {"Alice", "Bob", "Alice", "Charlie", "Bob", "David"};
+
+        HashSet<String> uniquename = new HashSet<>();
+
+       
+
+        for (String name: names ){
+            uniquename.add(name);
+        }
+
+        for(String name : uniquename )
+        System.out.println(name);
+
+
     }
-}
+
+
+
+
+    }
+
+
