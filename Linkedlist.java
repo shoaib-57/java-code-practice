@@ -44,7 +44,7 @@ public class Linkedlist {
         System.out.println("after update");
         for (String name : list){
          System.out.println(name);
-        }qwer
+        }qwe
 
 
        
