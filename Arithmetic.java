@@ -149,7 +149,7 @@ public class Arithmetic {
             withdraw(1000,500);
         }catch (Exception e ){
             System.out.println("invalid :" + e.getMessage());
-        }qw
+        }q
 }
 }
 
