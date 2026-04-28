@@ -12,7 +12,7 @@ public class Hashmap {
 
         System.out.println();
 
-
+        
         map.put("Alice",90);
         map.put("Bob", 75);
         map.put("Charlie",85);
