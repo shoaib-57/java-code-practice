@@ -50,5 +50,5 @@ history.add("youtube.com");
 for(String name3 : history ){
     System.out.println(name3);
 }
-    }qwer
+    }qwe
 }
