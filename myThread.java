@@ -82,6 +82,39 @@ class MyThread4 implements Runnable {
  }
 }
 
+class MyThread5 implements Runnable{
+  public void run(){
+     System.out.println("Thread1 running....");
+    try{
+         
+        Thread.sleep(2000);
+        System.out.println("Thread1 finished");
+
+    }catch (InterruptedException e){
+
+        System.out.println("Thread1 Intrupted ");
+    }
+
+  }
+  public static void main(String[] args) {
+    MyThread5 t1 = new MyThread5();
+    Thread t = new Thread(t1);
+
+    try{
+     t.start();
+     t.join();
+     System.out.println("main continue after Thread1");
+    }catch(InterruptedException e){
+     System.out.println("Intrupted");
+    }
+
+   
+
+  }
+}
+
+
+
 
 
 
