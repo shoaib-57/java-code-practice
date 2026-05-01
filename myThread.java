@@ -59,7 +59,29 @@ class MyTask implements Runnable{
         
     }
 
+
 }
+class MyThread4 implements Runnable {
+ public void run(){
+    System.out.println("Starting....");
+    try{
+        Thread.sleep(2000);
+        System.out.println("Woke up");
+
+    }catch(InterruptedException e) {
+      System.out.println("Thread Intrupted");
+    }
+
+ }
+ public static void main(String[] args) {
+    MyThread4  task = new MyThread4();
+    Thread t = new Thread(task);
+    t.start();
+
+
+ }
+}
+
 
 
 
