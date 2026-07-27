@@ -115,8 +115,7 @@ class MyThread5 implements Runnable{
 class WorkerThread implements Runnable{
     public void run(){
         
-    }qwe
-}
+    }q
 
 
 
